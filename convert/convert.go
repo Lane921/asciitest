@@ -126,7 +126,7 @@ func (converter *ImageConverter) Image2ASCIIString(image image.Image, options *O
 		buffer.WriteString(convertedPixelASCII[i])
 		fmt.Println(buffer.String())
 	}
-	return buffer.String()
+	return buffer
 }
 
 // ImageFile2ASCIIMatrix converts a image file to ascii matrix
