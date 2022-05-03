@@ -12,6 +12,7 @@ import (
 	_ "image/png"
 	"log"
 	"os"
+	"fmt"
 )
 
 // Options to convert the image to ASCII
@@ -122,7 +123,8 @@ func (converter *ImageConverter) Image2ASCIIString(image image.Image, options *O
 	var buffer bytes.Buffer
 
 	for i := 0; i < len(convertedPixelASCII); i++ {
-		buffer.WriteString("|" + convertedPixelASCII[i])
+		buffer.WriteString(convertedPixelASCII[i])
+		fmt.Println(buffer.String())
 	}
 	return buffer.String()
 }
