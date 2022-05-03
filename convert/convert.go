@@ -122,9 +122,9 @@ func (converter *ImageConverter) Image2ASCIIString(image image.Image, options *O
 	var buffer bytes.Buffer
 
 	for i := 0; i < len(convertedPixelASCII); i++ {
-		buffer.WriteString(convertedPixelASCII[i])
+		buffer.WriteString("|" + convertedPixelASCII[i])
 	}
-	return "|" + buffer.String()
+	return buffer.String()
 }
 
 // ImageFile2ASCIIMatrix converts a image file to ascii matrix
